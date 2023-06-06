@@ -1,0 +1,43 @@
+===============================================================================
+  
+Linked Lists
+
+===============================================================================
+
+• Series of nodes
+• Each node has at least a single pointer to the next node
+• The last node has a null pointer such that there are no more nodes
+• Maintain head and tail pointers
+
+Insertion: O(1)
+Deletion:  O(n)
+Search:    O(n)
+
+Singly Linked List: consists of value & reference to next node
+
+Insertion
+
+• Implicitly to the tail of the list
+
+  Insert(value):
+    n = Node(value)
+    if head == nil
+      head = n
+      tail = n
+    else
+      tail.next = n
+      tail = n
+    end
+
+Searching
+
+• Traverse list checking the value of each node 
+
+  Contains(value):
+    n = head
+    while n != nil and n.value != value
+      n = n.next
+    if n == nil 
+      return false
+    return true
+
